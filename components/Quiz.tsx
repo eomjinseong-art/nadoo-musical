@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import type { Q } from "@/data/quiz";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function Quiz({ items }: { items: Q[] }) {
   const [picked, setPicked] = useState<(number | null)[]>(items.map(() => null));
@@ -29,6 +30,7 @@ export function Quiz({ items }: { items: Q[] }) {
         점수 {score} / {items.length} {done ? (score >= items.length * 0.8 ? "· 기립박수 👏" : score >= items.length * 0.5 ? "· 앙코르!" : "· 2막에서 만회해요") : ""}
         {done ? <button type="button" className="ml-3 underline" onClick={() => setPicked(items.map(() => null))}>다시 풀기</button> : null}
       </div>
+      {done ? <CoupangCard /> : null}
     </div>
   );
 }

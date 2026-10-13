@@ -7,6 +7,7 @@ import { AiFigure, Section, SpoilerNote, Wrap } from "@/components/Ui";
 import { bySlug, COMPOSERS, COUNTRIES, eraOf, imageFor, MUSICALS } from "@/data/musicals";
 import { articleLd, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { CHECKLIST_URL } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -70,6 +71,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         {m.related ? <p className="mt-3 rounded-md border border-terra/40 bg-terra/5 px-3 py-2 text-sm">👤 실제 이야기 더 보기: <a className="text-terra underline" href={m.related.href}>{m.related.label}</a></p> : null}
         {m.realVsShow?.length ? <div className="mt-3"><p className="mb-1 font-semibold">실제 vs 무대 <span className="text-xs font-normal text-muted">Real vs show</span></p><List items={m.realVsShow} /></div> : null}
       </Section>
+      <CoupangCard />
       <Section title="캐스트" en="Cast">
         <p className="mb-1 font-semibold">초연·오리지널 캐스트</p>
         {m.cast.length ? <List items={m.cast} /> : <p className="text-sm text-muted">확인된 자료로 정리 중입니다.</p>}
