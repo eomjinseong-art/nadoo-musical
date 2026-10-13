@@ -22,6 +22,7 @@ export type Musical = {
   trivia: string[];
   legends?: string[];
   films: Film[];
+  related?: { href: string; label: string };
 };
 export type CountryKey = "uk" | "us" | "fr" | "at" | "kr";
 export type ComposerKey =

@@ -67,6 +67,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <Section title="원작과 소재" en="Source material">
         <p className="text-sm"><span className="mr-2 rounded bg-terra/10 px-2 py-0.5 text-xs text-terra">{m.source.kind}</span>{m.source.title}</p>
         <p className="mt-2 text-sm leading-7 text-muted">{m.source.note}</p>
+        {m.related ? <p className="mt-3 rounded-md border border-terra/40 bg-terra/5 px-3 py-2 text-sm">👤 실제 이야기 더 보기: <a className="text-terra underline" href={m.related.href}>{m.related.label}</a></p> : null}
         {m.realVsShow?.length ? <div className="mt-3"><p className="mb-1 font-semibold">실제 vs 무대 <span className="text-xs font-normal text-muted">Real vs show</span></p><List items={m.realVsShow} /></div> : null}
       </Section>
       <Section title="캐스트" en="Cast">
