@@ -6,6 +6,7 @@ import { COMPOSERS, COUNTRIES, IMAGES, MUSICALS } from "@/data/musicals";
 import { QUIZ } from "@/data/quiz";
 import { itemListLd, jsonLd, pageMetadata, websiteLd } from "@/lib/seo";
 import { CHECKLIST_URL, SITE_SUB, SITE_TAGLINE } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata = pageMetadata({ title: "나두뮤지컬", description: `${SITE_TAGLINE}. ${SITE_SUB}`, path: "/" });
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Section title="한국 창작 뮤지컬" en="Korean originals">
         <MusicalGrid items={korean} />
       </Section>
+      <CoupangCard />
       <Section title="모든 작품 (초연 순)" en="All musicals by premiere">
         <MusicalGrid items={MUSICALS} />
       </Section>
