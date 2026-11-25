@@ -14,6 +14,7 @@ const serif = Noto_Serif_KR({ subsets: ["latin"], variable: "--font-noto-serif",
 const description = `${SITE_TAGLINE}. ${SITE_SUB}`;
 
 export const metadata: Metadata = {
+  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM" },
   metadataBase: new URL(SITE_URL),
   title: { default: `${SITE_NAME} · 명작 뮤지컬 깊이 읽기`, template: `%s · ${SITE_NAME}` },
   description,
