@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHead } from "@/components/PageHead";
@@ -20,6 +21,7 @@ export default async function Page({ params }: { params: Promise<{ n: string }> 
     <Wrap>
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { href: "/quiz", label: "퀴즈" }, { label: `${n}막` }]} />
       <PageHead kicker={`QUIZ · SET ${n}/${QUIZ_SETS}`} title={`퀴즈 ${n}막`} />
+      <NadooAd inline />
       <Quiz key={n} items={quizSet(n)} />
       <nav className="mt-6 flex justify-between text-sm">
         {n > 1 ? <Link href={`/quiz/${n - 1}`}>← {n - 1}막</Link> : <span />}

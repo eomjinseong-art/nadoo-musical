@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { PageHead } from "@/components/PageHead";
 import { Wrap } from "@/components/Ui";
@@ -13,6 +14,7 @@ export default function Page() {
     <Wrap>
       <PageHead kicker="FILMS" title={`뮤지컬과 영화 ${rows.length}편`} lead="뮤지컬 영화판, 그리고 뮤지컬의 원작이 된 영화를 함께 모았습니다. ‘뮤지컬 아님’ 표시는 같은 원작을 다룬 일반 영화입니다. 링크는 위키백과로 이어집니다." />
       <p className="mt-4 rounded-md border border-terra/40 bg-terra/5 px-3 py-2 text-sm">🎬 본 영화는 <a className="text-terra underline" href={CHECKLIST_URL}>영화봇 ‘뮤지컬 영화’ 체크리스트</a>에서 체크하세요.</p>
+      <NadooAd inline />
       <ul className="mt-6 divide-y divide-line rounded-lg border border-line bg-card">
         {rows.map(({ m, f }) => (
           <li key={f.url} className="flex flex-wrap items-baseline gap-x-3 px-4 py-2 text-sm">

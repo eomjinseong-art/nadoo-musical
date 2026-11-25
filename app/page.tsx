@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { MusicalGrid } from "@/components/MusicalCard";
@@ -19,6 +20,7 @@ export default function Home() {
       <h1 className="mt-2 font-serif text-4xl leading-tight">막이 오르기 전에,<br />이야기의 끝까지 먼저.</h1>
       <p className="mt-4 max-w-3xl leading-8 text-muted">{SITE_SUB}</p>
       <AiFigure {...IMAGES.hero} />
+      <NadooAd inline />
       <ul className="mt-6 grid grid-cols-2 gap-3 text-center sm:grid-cols-4">
         {[["작품", `${MUSICALS.length}편`, "/musicals"], ["나라", `${Object.keys(COUNTRIES).length}곳`, "/countries"], ["작곡가 묶음", `${Object.keys(COMPOSERS).length}`, "/composers"], ["퀴즈", `${QUIZ.length}문제`, "/quiz"]].map(([a, b, h]) => (
           <li key={a}><Link href={h} className="block rounded-lg border border-line bg-card p-3 hover:border-terra"><span className="block font-serif text-2xl text-terra">{b}</span><span className="text-xs text-muted">{a}</span></Link></li>

@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { PageHead } from "@/components/PageHead";
 import { Section, Wrap } from "@/components/Ui";
@@ -20,6 +21,7 @@ export default function Page() {
           <li>공연 시연 영상이나 공연 사진은 쓰지 않습니다.</li>
         </ul>
       </Section>
+      <NadooAd inline />
       <Section title="이미지" en="Images">
         <p className="text-sm leading-7 text-muted">이 사이트의 그림은 모두 OpenAI gpt-image-1로 만든 AI 일러스트입니다. 실존 인물이나 배우를 그리지 않았고, 실제 공연 장면이 아닙니다.</p>
         <ul className="mt-2 list-disc pl-5 text-sm">{Object.values(IMAGES).map((i) => <li key={i.src}>{i.alt} — <code>{i.src}</code></li>)}</ul>
