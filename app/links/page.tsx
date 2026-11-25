@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { PageHead } from "@/components/PageHead";
 import { Card, Wrap } from "@/components/Ui";
 import { pageMetadata } from "@/lib/seo";
@@ -25,6 +26,7 @@ export default function Page() {
           </a>
         ))}
       </div>
+      <NadooAd inline />
       <div className="mt-6"><Card title="나두 허브" sub="tinalinkeom">나두 패밀리 전체 링크는 <a className="underline" href="https://tinalinkeom.vercel.app">나두 허브</a>에서.</Card></div>
     </Wrap>
   );

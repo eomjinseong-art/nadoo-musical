@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -65,6 +66,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <p className="mb-2 text-xs text-muted">저작권 보호를 위해 제목만 적고 가사는 싣지 않습니다. Titles only — no lyrics.</p>
         <ol className="grid list-decimal gap-1 pl-5 text-sm sm:grid-cols-2">{m.numbers.map((n) => <li key={n}>{n}</li>)}</ol>
       </Section>
+      <NadooAd inline />
       <Section title="원작과 소재" en="Source material">
         <p className="text-sm"><span className="mr-2 rounded bg-terra/10 px-2 py-0.5 text-xs text-terra">{m.source.kind}</span>{m.source.title}</p>
         <p className="mt-2 text-sm leading-7 text-muted">{m.source.note}</p>

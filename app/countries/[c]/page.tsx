@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MusicalGrid } from "@/components/MusicalCard";
 import { PageHead } from "@/components/PageHead";
@@ -21,6 +22,7 @@ export default async function Page({ params }: { params: Promise<{ c: string }> 
     <Wrap>
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { href: "/countries", label: "나라별" }, { label: c.ko }]} />
       <PageHead kicker={c.en} title={`${c.flag} ${c.ko}`} lead={c.blurb} />
+      <NadooAd inline />
       <MusicalGrid items={MUSICALS.filter((m) => m.country === k)} />
     </Wrap>
   );
